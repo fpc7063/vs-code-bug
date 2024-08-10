@@ -1,0 +1,11 @@
+{
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/inventory.json": [
+            "file:///home/fpc/GIT/MEUGIT/iac/ansible/inventory/testing/cluster.yml",
+            "file:///home/fpc/GIT/MEUGIT/iac/ansible/inventory/testing/all.yml",
+            "file:///home/fpc/GIT/MEUGIT/iac/ansible/inventory/production/all.yaml"
+        ],
+        "https://raw.githubusercontent.com/canonical/cloud-init/main/cloudinit/config/schemas/versions.schema.cloud-config.json": "file:///home/fpc/GIT/MEUGIT/iac/vm/user-data.yml"
+    },
+    "ansible.python.interpreterPath": "/home/fpc/GIT/MEUGIT/iac/ansible/venv/bin/python"
+}

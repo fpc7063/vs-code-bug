@@ -1,0 +1,18 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
+{
+	"name": "Existing Dockerfile",
+	"build": {
+		"context": "..",
+		"dockerfile": "../Dockerfile",
+		"args": {
+			"network": "host",
+			"name": "ansible"
+		}
+	},
+	"containerUser": "ansible",
+	"runArgs": [
+		"--network=host",
+		"--name=ansible-vsc"
+	]
+}

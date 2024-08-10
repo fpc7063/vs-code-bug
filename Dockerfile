@@ -9,7 +9,7 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y apt-utils apt-transport-https locales bash-completion ca-certificates git \
         curl python3 python3-venv python3-pip netcat-openbsd traceroute iputils-ping iproute2 \
-        man iputils-arping iputils-tracepath && \
+        man iputils-arping iputils-tracepath bash && \
     sed -i -e 's/# pt_BR.UTF-8 UTF-8/pt_BR.UTF-8 UTF-8/' /etc/locale.gen && \
     sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
     rm -rf /var/lib/apt/lists/*
@@ -45,4 +45,6 @@ RUN mkdir ~/.ssh && \
 
 RUN chown -Rf ansible:ansible ${USER_HOME_DIR}
 USER ansible
+
+ENTRYPOINT [ "/bin/bash", "-c" ]
 
